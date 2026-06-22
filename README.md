@@ -7,7 +7,32 @@
 ![FIAP](https://img.shields.io/badge/FIAP-ON-red)
 ![GoodWe](https://img.shields.io/badge/GoodWe-HCA%20G2-brightgreen)
 
+Este repositório documenta a Sprint 1 do EV ChargeOps: a pesquisa e o desenho de uma plataforma de gestão de recarga compartilhada para o carregador GoodWe HCA G2 instalado na FIAP. O conteúdo está dividido em três frentes - contexto e regulação, integração técnica com o carregador, e arquitetura/IA da solução - fechando com o plano de implementação da Sprint 2.
 
+### Sumário
+
+- [Equipe](#equipe)
+- [O problema](#o-problema)
+- [Frente 1 - Contexto e Problema](#frente-1---contexto-e-problema)
+  - [Infraestruturas de recarga compartilhada](#infraestruturas-de-recarga-compartilhada)
+  - [Anatomia técnica de uma sessão de recarga](#anatomia-técnica-de-uma-sessão-de-recarga)
+  - [Modelos de negócio para recarga compartilhada](#modelos-de-negócio-para-recarga-compartilhada)
+  - [1.1 Aprofundamento - Análise de mercado](#11-aprofundamento---análise-de-mercado)
+- [Frente 2 - Base Regulatória e Técnica](#frente-2---base-regulatória-e-técnica)
+  - [ANEEL REN 1.000/2021](#aneel-ren-10002021)
+  - [Carregador GoodWe HCA G2 - interfaces disponíveis](#carregador-goodwe-hca-g2---interfaces-disponíveis)
+  - [API GoodWe SEMS Portal - endpoints mapeados](#api-goodwe-sems-portal---endpoints-mapeados)
+  - [2.1 Aprofundamento - Mapeamento de APIs complementares](#21-aprofundamento---mapeamento-de-apis-complementares)
+- [Frente 3 - Arquitetura e IA](#frente-3---arquitetura-e-ia)
+  - [As quatro camadas da plataforma](#as-quatro-camadas-da-plataforma)
+  - [Fluxo de dados - da sessão à fatura](#fluxo-de-dados---da-sessão-à-fatura)
+  - [Modelo de rateio proposto](#modelo-de-rateio-proposto)
+  - [3.1 Aprofundamento - Benchmarking de modelos de rateio](#31-aprofundamento---benchmarking-de-modelos-de-rateio)
+  - [Papel da IA na solução](#papel-da-ia-na-solução)
+- [Plano para a Sprint 2](#plano-para-a-sprint-2)
+- [Referências](#referências)
+
+---
 
 ## Equipe
 
@@ -172,7 +197,7 @@ A Google Places API, na sua versão mais recente, inclui o campo `evChargeOption
 
 A arquitetura do EV ChargeOps é organizada em quatro camadas - física, conectividade, aplicação e apresentação -, com a IA atravessando as duas últimas. Cada camada abaixo reflete as decisões de arquitetura já fechadas nesta Sprint 1.
 
-![Arquitetura EV ChargeOps](assets/diagrama-arquitetura.png)
+![Arquitetura EV ChargeOps](docs/arquitetura.png)
 
 **Detalhamento dos componentes de cada camada:**
 
@@ -375,6 +400,9 @@ O desafio pede que o grupo documente o que será desenvolvido na Sprint 2, em qu
 - Wallbox. Pulsar Plus. Disponível em: https://wallbox.com
 - ChargePoint. Business Model Overview. Disponível em: https://www.chargepoint.com
 - NeoCharge. Smart Charging FAQ. Disponível em: https://help.getneocharge.com
+- Use Energia. Plataforma de rateio automatizado de energia para condomínios. Disponível em: https://www.useenergia.eco.br/
+- Power2Go. Carregadores para condomínios e residências. Disponível em: https://www.power2go.com.br/condominios-e-residencias
+- Copel. Copel elabora projeto de gestão inteligente de dados para mobilidade elétrica. Disponível em: https://www.copel.com/site/noticias/copel-elabora-projeto-de-gestao-inteligente-de-dados-para-mobilidade-eletrica/
 - Sociedade Brasileira de Automática. Operação em tempo real de estações de recarga de VEs com integração fotovoltaica. CBA 2022. Disponível em: https://www.sba.org.br/cba2022/wp-content/uploads/artigos_cba2022/paper_7271.pdf
 - GESEL/UFRJ. A cobrança nos postos de recarga no Brasil e no mundo. Disponível em: https://gesel.ie.ufrj.br
 - Oliveira & Rohr Advocacia. Modelos de tarifação para recarga de VEs no Brasil. Disponível em: https://oliveiraerohr.com.br/blog/modelos-de-tarifacao-para-recarga-de-veiculos-eletricos-no-brasil-legislacao-e-desafios/
