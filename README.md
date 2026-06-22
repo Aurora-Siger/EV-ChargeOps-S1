@@ -307,45 +307,52 @@ O objetivo do modelo é o rateio justo dos custos, não gerar lucro sobre a ener
 
 ### 3.1 Aprofundamento - Benchmarking de modelos de rateio
 Encontramos duas empresas que utilizam formas diferentes de cobrança. Deixamos abaixo como cada modelo opera, suas vantagens e desvantagens.
----
-
-#### Modelo 1 - Rateio por Consumo Individual (kWh Medido)
-
-**Onde é utilizado**
-A empresa **Use Energia**, sediada em **Recife (PE)**, oferece uma plataforma para condomínios com rateio automatizado da energia, emissão de faturas individuais e controle do consumo de cada morador.
-
-**Como funciona**
-Cada morador é identificado pelo aplicativo ou cartão de acesso ao carregador. O sistema mede exatamente quantos kWh foram consumidos durante a recarga e gera uma cobrança individual correspondente ao uso realizado.
-
-**Vantagens**
-- Cobrança justa - cada usuário paga apenas pelo que consumiu
-- Transparência para síndicos e moradores
-- Evita conflitos relacionados ao rateio da energia
-- Fácil expansão conforme aumenta o número de veículos elétricos
-
-**Limitações**
-- Necessita de carregadores inteligentes ou sistema de medição individual
-- Maior investimento inicial para implantação
 
 ---
 
-#### Modelo 2 - Cobrança Compartilhada com Plataforma de Gestão
+#### Modelo 1 - Rateio por consumo individual medido (kWh)
 
 **Onde é utilizado**
-A empresa **Power2Go**, de **São Paulo (SP)**, oferece soluções para condomínios com carregadores compartilhados, permitindo cobrança por consumo de energia, por tempo de utilização ou integração com a taxa condominial.
+Adotado por empresas como Power2Go e Tupimob no Brasil.
 
 **Como funciona**
-Os carregadores registram o consumo de cada usuário e enviam as informações para uma plataforma em nuvem. O condomínio pode optar por cobrar diretamente na taxa condominial ou utilizar o sistema de cobrança da própria empresa.
+Cada usuário é identificado via app ou cartão de acesso ao carregador. A plataforma mede exatamente quantos kWh foram consumidos em cada sessão e gera cobrança individual proporcional ao uso realizado.
 
 **Vantagens**
-- Gestão automatizada da cobrança
-- Controle individual do consumo
-- Flexibilidade para definir políticas de uso e preços
-- Facilita a administração pelo síndico
+- Cobrança justa, transparente e auditável
+- Quem não usa não paga
+- Escala bem com o aumento de usuários
 
 **Limitações**
-- Dependência da plataforma tecnológica
-- Pode haver custos adicionais de gestão do sistema
+- Exige carregadores inteligentes com medição individual
+- Maior investimento inicial de infraestrutura
+
+**Fontes**
+- https://tupimob.com/carregador-eletrico-condominio/
+- https://electricmobilitybrasil.com/artigo/posso-instalar-um-carregador-no-meu-condominio-residencial
+
+---
+
+#### Modelo 2 - Assinatura mensal com carregador incluso (hardware + serviço)
+
+**Onde é utilizado**
+Adotado pela Power2Go como opção alternativa para condomínios.
+
+**Como funciona**
+O morador paga uma mensalidade fixa que cobre o carregador, instalação, monitoramento e manutenção - sem necessidade de gestão interna pelo síndico.
+
+**Vantagens**
+- Sem investimento inicial
+- Previsibilidade de custo
+- Operação terceirizada
+
+**Limitações**
+- Pode ser percebido como injusto quando perfis de uso são muito desiguais
+- Menos transparência sobre o consumo real de cada sessão
+
+**Fontes**
+- https://www.power2go.com.br/condominios-e-residencias
+- https://www.power2go.com.br/post/quem-paga-pela-energia-da-recarga-do-carro-eletrico-no-condominio
 
 ### Papel da IA na solução
 
@@ -400,8 +407,10 @@ O desafio pede que o grupo documente o que será desenvolvido na Sprint 2, em qu
 - Wallbox. Pulsar Plus. Disponível em: https://wallbox.com
 - ChargePoint. Business Model Overview. Disponível em: https://www.chargepoint.com
 - NeoCharge. Smart Charging FAQ. Disponível em: https://help.getneocharge.com
-- Use Energia. Plataforma de rateio automatizado de energia para condomínios. Disponível em: https://www.useenergia.eco.br/
 - Power2Go. Carregadores para condomínios e residências. Disponível em: https://www.power2go.com.br/condominios-e-residencias
+- Power2Go. Quem paga pela energia da recarga do carro elétrico no condomínio? Disponível em: https://www.power2go.com.br/post/quem-paga-pela-energia-da-recarga-do-carro-eletrico-no-condominio
+- Tupimob. Carregador elétrico em condomínio. Disponível em: https://tupimob.com/carregador-eletrico-condominio/
+- Electric Mobility Brasil. Posso instalar um carregador no meu condomínio residencial? Disponível em: https://electricmobilitybrasil.com/artigo/posso-instalar-um-carregador-no-meu-condominio-residencial
 - Copel. Copel elabora projeto de gestão inteligente de dados para mobilidade elétrica. Disponível em: https://www.copel.com/site/noticias/copel-elabora-projeto-de-gestao-inteligente-de-dados-para-mobilidade-eletrica/
 - Sociedade Brasileira de Automática. Operação em tempo real de estações de recarga de VEs com integração fotovoltaica. CBA 2022. Disponível em: https://www.sba.org.br/cba2022/wp-content/uploads/artigos_cba2022/paper_7271.pdf
 - GESEL/UFRJ. A cobrança nos postos de recarga no Brasil e no mundo. Disponível em: https://gesel.ie.ufrj.br
