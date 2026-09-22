@@ -292,7 +292,7 @@ O teto foi fixado em 1,5x (e não 2,0x) porque, com um único ponto de carga, é
 
 Rateados **igualmente entre os usuários cadastrados ativos**. Um usuário é considerado ativo se realizou ao menos uma recarga no mês anterior; quem não carregou fica isento da parcela fixa daquele ciclo.
 
-O objetivo do modelo é o rateio justo dos custos, não gerar lucro sobre a energia. Por isso, o que o usuário pagou **além** do custo real de energia da concessionária - ou seja, o valor adicional gerado pelo multiplicador de demanda e pela cobrança de ociosidade naquele ciclo - é abatido da parcela de custo fixo de infraestrutura que ele deveria pagar. Esse excedente funciona como crédito contra a taxa de infraestrutura, não como receita extra da operação.
+O objetivo do modelo é o rateio justo dos custos, não gerar lucro sobre a energia — e também não gerar prejuízo. Por isso, o que o usuário pagou **além** do custo real de energia da concessionária - ou seja, o valor adicional gerado pelo multiplicador de demanda e pela cobrança de ociosidade naquele ciclo - é abatido da parcela de custo fixo de infraestrutura que ele deveria pagar. Esse excedente funciona como crédito contra a taxa de infraestrutura, não como receita extra da operação. **O crédito trava em zero:** se o excedente do usuário for maior que a própria cota de custo fixo devida, o abatimento para em zero — não vira reembolso, nem desconto em outra cobrança, nem crédito para o ciclo seguinte. Isso não é um caso raro: um usuário que carrega quase sempre em horário de pico (ex.: sempre ao chegar do trabalho, 18h-20h) pode facilmente acumular um excedente mensal maior que sua cota, principalmente num condomínio com muitos moradores cadastrados mas poucos carregando de fato (cota individual pequena).
 
 **Ciclo de faturamento:** mensal.
 
@@ -304,6 +304,7 @@ O objetivo do modelo é o rateio justo dos custos, não gerar lucro sobre a ener
 | Sessão interrompida por falha do equipamento | Cobra o kWh entregue até a falha; ociosidade é zerada (a culpa não é do usuário), mesmo que o carregador fique ocioso depois. |
 | Usuário cadastrado que não carregou no mês | Isento da parcela de custo fixo de infraestrutura naquele ciclo. |
 | Duas unidades/veículos do mesmo morador | Cada RFID gera sessões próprias, consolidadas na mesma fatura; ocupa duas posições no rateio do custo fixo. |
+| Excedente do usuário maior que sua cota de custo fixo | Crédito trava em zero: não vira reembolso nem desconto em outra cobrança. Nunca gera prejuízo nem lucro pra operação, só deixa de existir excedente pra abater naquele ciclo. |
 
 ### 3.1 Aprofundamento - Benchmarking de modelos de rateio
 Encontramos duas empresas que utilizam formas diferentes de cobrança. Deixamos abaixo como cada modelo opera, suas vantagens e desvantagens.
